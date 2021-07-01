@@ -74,7 +74,7 @@ const renderButtons = (page, numResults, resPerPage) => {
       ${createButton(page, 'next')}   
     `;
   }
-  else if (page === 1 && pages > 1){
+  else if (page === pages && pages > 1){
     button = createButton(page, 'prev');
   }
 
