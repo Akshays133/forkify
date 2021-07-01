@@ -26,9 +26,7 @@ export const clearRecipe = () => {
 
 const createIngredient = ingredient => `
     <li class="recipe__item">
-    <svg class="recipe__icon">
-        <use href="img/cross.png"></use>
-    </svg>
+    <img src="img/cross.png" alt="cross" class="recipe__icon">
     <div class="recipe__count">${formatCount(ingredient.count)}</div>
     <div class="recipe__ingredient">
         <span class="${ingredient.unit}">cup</span>
@@ -47,37 +45,27 @@ export const renderRecipe = (recipe, isLiked) => {
 </figure>
 <div class="recipe__details">
     <div class="recipe__info">
-        <svg class="recipe__info-icon">
-            <use href="img/stopwatch.png"></use>
-        </svg>
+        <img src="img/stopwatch.png" alt="stopwatch" class="recipe__info-icon">
         <span class="recipe__info-data recipe__info-data--minutes">45</span>
         <span class="recipe__info-text"> minutes</span>
     </div>
     <div class="recipe__info">
-        <svg class="recipe__info-icon">
-            <use href="img/info.png"></use>
-        </svg>
+        <img src="img/info.png" alt="info" class="recipe__info-icon">
         <span class="recipe__info-data recipe__info-data--people">4</span>
         <span class="recipe__info-text"> servings</span>
 
         <div class="recipe__info-buttons">
             <button class="btn-tiny btn-decrease">
-                <svg>
-                    <use href="img/minus.png"></use>
-                </svg>
+                <img src="img/minus.png" alt="minus">
             </button>
             <button class="btn-tiny btn-increase">
-                <svg>
-                    <use href="img/plus.png"></use>
-                </svg>
+                <img src="img/plus.png" alt="plus">
             </button>
         </div>
 
     </div>
     <button class="recipe__love">
-        <svg class="header__likes">
-            <use href="img/${isLiked ? 'heart' : 'like'}.png"></use>
-        </svg>
+        <img src="img/${isLiked ? 'heart' : 'favorite'}.png" >
     </button>
 </div>
 
@@ -87,9 +75,7 @@ export const renderRecipe = (recipe, isLiked) => {
     </ul>
 
     <button class="btn-small recipe__btn recipe__btn--add">
-        <svg class="search__icon">
-            <use href="img/shop.png"></use>
-        </svg>
+        <img src="img/shop.png" alt="shop" class="search__icon">
         <span>Add to shopping list</span>
     </button>
 </div>

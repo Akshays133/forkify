@@ -9,9 +9,7 @@ export const renderItem = (item) => {
         </div>
         <p class="shopping__description">${item.ingredient}</p>
         <button class="shopping__delete btn-tiny">
-            <svg>
-                <use href="img/close.png"></use>
-            </svg>
+            <img src="img/close.png" alt="close">
         </button>
     </li>
     `;
