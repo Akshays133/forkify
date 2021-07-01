@@ -27,7 +27,7 @@ export const clearRecipe = () => {
 const createIngredient = ingredient => `
     <li class="recipe__item">
     <svg class="recipe__icon">
-        <use href="img/icons.svg#icon-check"></use>
+        <use href="img/cross.png"></use>
     </svg>
     <div class="recipe__count">${formatCount(ingredient.count)}</div>
     <div class="recipe__ingredient">
@@ -48,14 +48,14 @@ export const renderRecipe = (recipe, isLiked) => {
 <div class="recipe__details">
     <div class="recipe__info">
         <svg class="recipe__info-icon">
-            <use href="img/icons.svg#icon-stopwatch"></use>
+            <use href="img/stopwatch.png"></use>
         </svg>
         <span class="recipe__info-data recipe__info-data--minutes">45</span>
         <span class="recipe__info-text"> minutes</span>
     </div>
     <div class="recipe__info">
         <svg class="recipe__info-icon">
-            <use href="img/icons.svg#icon-man"></use>
+            <use href="img/info.png"></use>
         </svg>
         <span class="recipe__info-data recipe__info-data--people">4</span>
         <span class="recipe__info-text"> servings</span>
@@ -63,12 +63,12 @@ export const renderRecipe = (recipe, isLiked) => {
         <div class="recipe__info-buttons">
             <button class="btn-tiny btn-decrease">
                 <svg>
-                    <use href="img/icons.svg#icon-circle-with-minus"></use>
+                    <use href="img/minus.png"></use>
                 </svg>
             </button>
             <button class="btn-tiny btn-increase">
                 <svg>
-                    <use href="img/icons.svg#icon-circle-with-plus"></use>
+                    <use href="img/plus.png"></use>
                 </svg>
             </button>
         </div>
@@ -76,7 +76,7 @@ export const renderRecipe = (recipe, isLiked) => {
     </div>
     <button class="recipe__love">
         <svg class="header__likes">
-            <use href="img/icons.svg#icon-heart${isLiked ? '' : '-outlined'}"></use>
+            <use href="img/${isLiked ? 'heart' : 'like'}.png"></use>
         </svg>
     </button>
 </div>
@@ -88,7 +88,7 @@ export const renderRecipe = (recipe, isLiked) => {
 
     <button class="btn-small recipe__btn recipe__btn--add">
         <svg class="search__icon">
-            <use href="img/icons.svg#icon-shopping-cart"></use>
+            <use href="img/shop.png"></use>
         </svg>
         <span>Add to shopping list</span>
     </button>
